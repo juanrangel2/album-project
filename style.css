@@ -1,0 +1,86 @@
+.display img {
+    width: 300px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    flex-direction: column;
+    padding: 20px;
+}
+
+input{
+    width:280px;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    width: 350px;
+    background-color: #5c9df5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #418ac3;
+}
+
+/* Button active effect */
+button:active {
+    background-color: #3478a4;
+}
+
+/* Display area for albums */
+.display {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Style for each album display */
+.album {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+}
+
+.album img {
+    width: 100%;
+    height: 200px; /* Adjust image height */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.album h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.album p {
+    font-size: 14px;
+    color: #777;
+}

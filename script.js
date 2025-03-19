@@ -1,42 +1,58 @@
-let album1 ={
+let album1 = {
     image: "ivan.webp",
     artist: "Ivan Cornejo",
     album: "Mirada",
     release: "2024"
 }
 
-let album2 ={
+let album2 = {
     image: "peep.webp",
     artist: "Lil Peep",
     album: "Hellboy",
     release: "2016"
 }
-
 let albums = [album1, album2];
 
 let url = document.querySelector(".url");
 let artist = document.querySelector(".artist");
-let album = document.querySelector(".album");
+let albume = document.querySelector(".albume");
 let year = document.querySelector(".year");
-let display = document.querySelector(".display");
+let add = document.querySelector(".add");
+let display = document.querySelector(".display"); // Select the display div
 
-
-add.onclick = function(){
-let urlInput = url.value;
-let artistInput = artist.value;
-let albumInput = album.value;
-let yearInput = year.value;
-
-let newAlbum = {
-    image: urlInput,
-    artist: artistInput,
-    album: albumInput,
-    release: yearInput
+function displayAlbum(album) {
+    let albumHTML = `
+        <div class="album">
+            <img src="${album.image}" alt="${album.album}" />
+            <h3>${album.album}</h3>
+            <p>Artist: ${album.artist}</p>
+            <p>Release Year: ${album.release}</p>
+        </div>
+    `;
+    display.insertAdjacentHTML("beforeend", albumHTML); 
 }
- albums.push(newAlbum);
 
- display.insertAdjacentHTML("beforeend", albums[0]);
-forEach(album){
-`<img src = urlInput> <p> artistInput </p> <p> albumInput </p> <p> yearInput </p>`
-}
-};
+albums.forEach(album => {
+    displayAlbum(album);
+});
+
+add.addEventListener('click', () => {
+    let newAlbum = {
+        image: url.value,
+        artist: artist.value,
+        album: albume.value,
+        release: year.value
+    };
+
+    albums.push(newAlbum);
+
+    url.value = "";
+    artist.value = "";
+    albume.value = "";
+    year.value = "";
+
+    display.innerHTML = "";
+    albums.forEach(album => {
+        displayAlbum(album);
+    });
+});
