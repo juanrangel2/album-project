@@ -18,18 +18,16 @@ let artist = document.querySelector(".artist");
 let albume = document.querySelector(".albume");
 let year = document.querySelector(".year");
 let add = document.querySelector(".add");
-let display = document.querySelector(".display"); // Select the display div
+let display = document.querySelector(".display"); 
 
 function displayAlbum(album) {
-    let albumHTML = `
-        <div class="album">
-            <img src="${album.image}" alt="${album.album}" />
+    let albumThing = `<div class="album">
+            <img src="${album.image}" />
             <h3>${album.album}</h3>
             <p>Artist: ${album.artist}</p>
             <p>Release Year: ${album.release}</p>
-        </div>
-    `;
-    display.insertAdjacentHTML("beforeend", albumHTML); 
+        </div>`;
+    display.insertAdjacentHTML("beforeend", albumThing); 
 }
 
 albums.forEach(album => {
