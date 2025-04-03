@@ -13,33 +13,32 @@ input{
     margin: 10px ;
     padding: 10px;
     border-radius: 8px;
-    font-family: 'Arial', sans-serif;
-
 }
 
 button {
     width: 350px;
+    height:50px;
     background-color: #5c9df5;
     color: white;
     font-weight: bold;
     font-size: 16px;
-    margin: 10px 0;
     padding: 10px;
     border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
 }
 
 button:hover {
-    background-color: #418ac3;
+    background-color: #2d52f8;
 }
 
 .display {
     width: 100%;
-    margin-top: 20px;
     display: flex;
-    justify-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     font-family: 'Arial', sans-serif;
-    justify-content:space-around;
 
 }
 
@@ -48,25 +47,21 @@ button:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 250px;
     padding: 15px;
+    margin-bottom: 20px;
     text-align: center;
-    
+    height: 350px;
 }
 
-.album img {
+img {
     width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
 }
 
-.album h3 {
+h3 {
     font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
 }
 
-.album p {
+p {
     font-size: 14px;
-    color: #777;
 }
     .boldonse-regular {
         font-family: "Boldonse", system-ui;

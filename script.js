@@ -22,7 +22,7 @@ let display = document.querySelector(".display");
 
 function displayAlbum(album) {
     let albumThing = `<div class="album">
-            <img src="${album.image}" />
+            <img src="${album.image}">
             <h3>${album.album}</h3>
             <p>Artist: ${album.artist}</p>
             <p>Release Year: ${album.release}</p>
