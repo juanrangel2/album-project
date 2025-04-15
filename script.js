@@ -30,6 +30,11 @@ function displayAlbum(album) {
     display.insertAdjacentHTML("beforeend", albumThing); 
 }
 
+function loop(){
+    albums.forEach(album => {
+        displayAlbum(album);
+    }); 
+}
 albums.forEach(album => {
     displayAlbum(album);
 }); 
@@ -58,8 +63,5 @@ add.addEventListener('click', () => {
    
     newA();
     clear();
-   
-    albums.forEach(album => {
-        displayAlbum(album);
-    });
+    loop();
 });
