@@ -5,6 +5,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: linear-gradient(to right, rgb(255, 255, 255) , rgb(0, 0, 0));
+
 }
 
 input{
@@ -13,12 +15,14 @@ input{
     margin: 10px ;
     padding: 10px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 button {
     width: 350px;
     height:50px;
-    background-color: #5c9df5;
+    background-color: #414142;
     color: white;
     font-weight: bold;
     font-size: 16px;
@@ -26,11 +30,12 @@ button {
     border-radius: 8px;
     margin-top: 20px;
     margin-bottom: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
 button:hover {
-    background-color: #2d52f8;
+    background-color: #252525;
 }
 
 .display {
@@ -39,7 +44,6 @@ button:hover {
     flex-direction: column;
     align-items: center;
     font-family: 'Arial', sans-serif;
-
 }
 
 .album {
@@ -50,6 +54,8 @@ button:hover {
     margin-bottom: 20px;
     text-align: center;
     height: 350px;
+    background-color: white;
+
 }
 
 img {

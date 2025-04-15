@@ -32,7 +32,7 @@ function displayAlbum(album) {
 
 albums.forEach(album => {
     displayAlbum(album);
-});
+}); 
 
 add.addEventListener('click', () => {
     let newAlbum = {
