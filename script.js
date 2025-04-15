@@ -34,7 +34,16 @@ albums.forEach(album => {
     displayAlbum(album);
 }); 
 
-add.addEventListener('click', () => {
+function clear(){
+    url.value = "";
+    artist.value = "";
+    albume.value = "";
+    year.value = "";
+
+    display.innerHTML = "";
+}
+
+function newA(){
     let newAlbum = {
         image: url.value,
         artist: artist.value,
@@ -43,13 +52,13 @@ add.addEventListener('click', () => {
     };
 
     albums.push(newAlbum);
+}
 
-    url.value = "";
-    artist.value = "";
-    albume.value = "";
-    year.value = "";
-
-    display.innerHTML = "";
+add.addEventListener('click', () => {
+   
+    newA();
+    clear();
+   
     albums.forEach(album => {
         displayAlbum(album);
     });
